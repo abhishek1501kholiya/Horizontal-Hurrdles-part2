@@ -43,6 +43,7 @@ class Game {
 
     cars = [car1, car2, car3, car4];
   }
+  
 
   play(){
     form.hide();
@@ -72,6 +73,8 @@ class Game {
         cars[index-1].y = y;
 
         if (index === player.index){
+          fill("red");
+          ellipse(x,y,60,60);
           cars[index - 1].shapeColor = "red";
           camera.position.x = displayWidth/2;
           camera.position.y = cars[index-1].y
